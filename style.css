@@ -179,9 +179,10 @@ a { color: var(--navy); }
 }
 .flavor p { margin: 0; color: var(--text); }
 .scoop {
-  display: grid; place-items: center; width: 62px; height: 62px; margin-bottom: 12px;
+  display: grid; place-items: center; width: 78px; height: 78px; margin-bottom: 12px;
   font-size: 2rem; background: #fff; border: 3px solid var(--navy); border-radius: 50%;
 }
+.scoop img { width: 58px; height: 58px; object-fit: contain; }
 .strawberry { --c: #ffc2d4; }
 .mango { --c: #ffe08a; }
 .mint { --c: #b6f0d6; }
@@ -221,6 +222,23 @@ a { color: var(--navy); }
 }
 .gallery img:nth-child(even) { transform: rotate(2deg); }
 .gallery img:nth-child(3n) { transform: rotate(-1deg); }
+
+/* Rate on itch.io */
+.rate { padding-top: 16px; }
+.rate-card {
+  display: block; max-width: 620px; margin: 0 auto; padding: 28px 24px 30px; text-align: center;
+  background: #fff; border: 3px solid var(--navy); border-radius: 28px; box-shadow: var(--outline);
+  color: var(--text); text-decoration: none;
+}
+.rate-card h2 { margin-bottom: .25em; }
+.rate-card p { margin: 0 auto 20px; max-width: 30em; color: var(--muted); }
+.stars { display: inline-flex; gap: 6px; margin-bottom: 10px; }
+.stars img { width: 54px; height: 54px; transition: transform .2s; }
+.stars img:nth-child(odd) { transform: rotate(-8deg); }
+.stars img:nth-child(even) { transform: rotate(8deg) translateY(-6px); }
+.rate-card:hover .stars img, .rate-card:focus-visible .stars img { transform: scale(1.15) translateY(-4px); }
+.rate-card:hover .btn { transform: translateY(-2px); box-shadow: 0 7px 0 var(--navy); }
+@media (max-width: 480px) { .stars img { width: 44px; height: 44px; } }
 
 /* Shore into donate */
 .shore { display: block; width: 100%; height: 50px; fill: var(--lagoon); background: var(--berry); margin-top: -1px; }

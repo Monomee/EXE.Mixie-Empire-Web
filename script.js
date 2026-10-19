@@ -28,8 +28,8 @@ const I18N = {
     'f3.text': 'Đồ họa dễ thương, đầy màu sắc, nhìn là thấy dễ chịu.',
     'f4.title': 'ASMR & Lo-fi',
     'f4.text': 'Âm thanh ASMR chân thực hòa cùng giai điệu Lo-fi dịu êm.',
-    'f5.title': 'Sticker & ốp lưng',
-    'f5.text': 'Sưu tầm sticker độc đáo, trang trí ốp lưng theo phong cách riêng.',
+    'f5.title': 'Sticker Achievement',
+    'f5.text': 'Hoàn thành thành tựu để mở khóa sticker độc đáo, trang trí ốp lưng theo phong cách riêng.',
     'f6.title': 'Miễn phí, không quảng cáo',
     'f6.text': 'Free-to-play, không quảng cáo ngắt quãng trải nghiệm của bạn.',
 
@@ -46,6 +46,11 @@ const I18N = {
 
     'gallery.title': 'Khoảnh khắc trong game',
     'gallery.alt': 'Ảnh chụp màn hình trong game',
+
+    'rate.title': 'Bạn thấy vui khi chơi?',
+    'rate.text': 'Một đánh giá 5 sao trên itch.io giúp thêm nhiều người tìm thấy Mixie Empire. Chỉ mất vài giây thôi!',
+    'rate.cta': 'Đánh giá 5 sao trên itch.io',
+    'rate.stars': '5 sao',
 
     'donate.title': 'Mời tác giả một ly trà sữa 🧋',
     'donate.text': 'Mixie Empire là dự án độc lập, hoàn toàn miễn phí. Nếu bạn thấy vui khi chơi, một chút ủng hộ sẽ giúp tác giả có thêm động lực làm game. Cảm ơn bạn rất nhiều!',
@@ -89,8 +94,8 @@ const I18N = {
     'f3.text': 'Cute, colorful graphics that are easy on the eyes.',
     'f4.title': 'ASMR & Lo-fi',
     'f4.text': 'Realistic ASMR sounds blended with soothing Lo-fi tunes.',
-    'f5.title': 'Stickers & phone cases',
-    'f5.text': 'Collect unique stickers and decorate phone cases your way.',
+    'f5.title': 'Sticker Achievement',
+    'f5.text': 'Unlock unique stickers through achievements and decorate phone cases your way.',
     'f6.title': 'Free, no ads',
     'f6.text': 'Free-to-play with no ads interrupting your chill time.',
 
@@ -107,6 +112,11 @@ const I18N = {
 
     'gallery.title': 'Moments in the game',
     'gallery.alt': 'In-game screenshot',
+
+    'rate.title': 'Enjoying the game?',
+    'rate.text': 'A 5-star rating on itch.io helps more people discover Mixie Empire. It only takes a few seconds!',
+    'rate.cta': 'Rate 5 stars on itch.io',
+    'rate.stars': '5 stars',
 
     'donate.title': 'Buy the developer a boba 🧋',
     'donate.text': 'Mixie Empire is an independent, completely free project. If it brings you joy, a little support keeps the developer going. Thank you so much!',
