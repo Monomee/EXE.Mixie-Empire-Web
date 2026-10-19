@@ -30,4 +30,4 @@ Trong `index.html`, tìm `donate.intl`, điền link vào `href` và xóa thuộ
 - **Netlify:** vào app.netlify.com/drop, kéo-thả cả thư mục này.
 - **GitHub Pages:** đẩy thư mục lên một repo, Settings → Pages → Deploy from branch `main` / root.
 
-Sau khi có tên miền, sửa `og:image` trong `index.html` thành URL đầy đủ (vd. `https://ten-mien/assets/logo.png`) để Facebook hiện ảnh khi chia sẻ.
+Trang đang chạy tại https://monomee.github.io/EXE.Mixie-Empire-Web/ — nếu đổi tên miền, sửa `og:image` trong `index.html` cho khớp.
