@@ -15,6 +15,8 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
+html { cursor: url('assets/deco/cursor.png') 5 1, auto; }
+a, button, .btn, .lang { cursor: url('assets/deco/cursor.png') 5 1, pointer; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 body {
   margin: 0;
@@ -44,7 +46,7 @@ a { color: var(--navy); }
 .lang {
   font: 800 15px 'Nunito', sans-serif; color: var(--navy);
   background: var(--sun); border: 3px solid var(--navy); border-radius: 999px;
-  padding: 3px 14px; cursor: pointer; box-shadow: 0 3px 0 var(--navy);
+  padding: 3px 14px; box-shadow: 0 3px 0 var(--navy);
 }
 @media (max-width: 760px) { .nav { display: none; } .lang { margin-left: auto; } }
 
@@ -81,7 +83,6 @@ a { color: var(--navy); }
   grid-template-areas: "copy video" "actions video";
 }
 .hero-copy { grid-area: copy; align-self: end; }
-.video { grid-area: video; }
 .hero-actions { grid-area: actions; align-self: start; }
 .hero-logo { width: min(380px, 78%); filter: drop-shadow(0 10px 14px #16306e40); margin-bottom: 10px; }
 .tagline {
@@ -107,32 +108,18 @@ a { color: var(--navy); }
 .wave-back { fill: var(--sea); bottom: 18px; opacity: .8; animation-duration: 22s; animation-direction: reverse; }
 .wave-front { fill: var(--sand); }
 
-/* Beach props */
-.palm { position: absolute; left: -24px; bottom: 34px; width: 250px; height: auto; overflow: visible; }
-.palm .trunk { fill: none; stroke: var(--navy); stroke-width: 22; stroke-linecap: round; }
-.palm .trunk-rings { fill: none; stroke: #c98b4a; stroke-width: 15; stroke-linecap: round; stroke-dasharray: 16 5; }
-.palm .leaves path { fill: #3fcf72; stroke: var(--navy); stroke-width: 3; stroke-linejoin: round; }
-.palm .leaves .dark { fill: #25a95a; }
-.palm .leaves { transform-origin: 112px 112px; animation: sway 6s ease-in-out infinite; }
-.palm .coco { fill: #7a4a22; stroke: var(--navy); stroke-width: 3; }
-.ring {
-  position: absolute; right: 20%; bottom: 30px; width: 84px; aspect-ratio: 1; border-radius: 50%;
-  background:
-    radial-gradient(circle, transparent 0 31%, var(--navy) 31% 35%, transparent 35% 95%, var(--navy) 95%),
-    conic-gradient(#ff5d7a 0 60deg, #fff 0 120deg, #ff5d7a 0 180deg, #fff 0 240deg, #ff5d7a 0 300deg, #fff 0);
-  -webkit-mask: radial-gradient(circle, transparent 0 31%, #000 31%);
-          mask: radial-gradient(circle, transparent 0 31%, #000 31%);
-  transform: scaleY(.5);
-  animation: float 4s ease-in-out infinite;
-}
-@keyframes sway { 50% { transform: rotate(3deg); } }
-@keyframes float { 50% { transform: translateY(-7px) scaleY(.5) rotate(6deg); } }
+/* Beach props: sprites from the game */
+.palm { position: absolute; left: -30px; bottom: 26px; width: 270px; height: auto; }
+.island { position: absolute; right: 15%; bottom: 30px; width: 165px; height: auto; z-index: 1; animation: float 5s ease-in-out infinite; }
+.video-wrap { grid-area: video; position: relative; }
+.sticker-cool { position: absolute; top: -38px; left: -34px; width: 86px; z-index: 2; transform: rotate(-14deg); }
+@keyframes float { 50% { transform: translateY(-8px) rotate(-2deg); } }
 
 @keyframes spin { to { transform: rotate(1turn); } }
 @keyframes surf { to { transform: translateX(-50%); } }
 @keyframes bob { 50% { transform: translateY(-8px); } }
 @media (prefers-reduced-motion: reduce) {
-  .sun::before, .wave, .c1, .palm .leaves, .ring { animation: none; }
+  .sun::before, .wave, .c1, .island { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -147,8 +134,9 @@ a { color: var(--navy); }
 }
 @media (max-width: 480px) {
   .hero { padding-top: 64px; padding-bottom: 170px; }
-  .palm { width: 92px; left: -26px; bottom: 26px; }
-  .ring { width: 60px; right: 10%; bottom: 18px; }
+  .palm { width: 120px; left: -30px; bottom: 22px; }
+  .island { width: 76px; right: 6%; bottom: 26px; }
+  .sticker-cool { width: 60px; top: -26px; left: -14px; }
   .hero-inner { gap: 16px; }
   .hero-logo { width: 190px; margin-bottom: 4px; }
   .tagline { font-size: 1.75rem; }
@@ -162,7 +150,7 @@ a { color: var(--navy); }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   font: 800 1.12rem 'Baloo 2', sans-serif; text-decoration: none; color: var(--navy);
-  padding: 12px 26px; border: 3px solid var(--navy); border-radius: 999px; cursor: pointer;
+  padding: 12px 26px; border: 3px solid var(--navy); border-radius: 999px;
   box-shadow: 0 5px 0 var(--navy); transition: transform .1s, box-shadow .1s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--navy); }
@@ -175,6 +163,8 @@ a { color: var(--navy); }
 .section { max-width: 1120px; margin: 0 auto; padding: 56px 16px; }
 .sand { background: var(--sand); }
 .lagoon { background: var(--lagoon); }
+.nap { position: relative; width: 84px; margin: 0 auto 6px; }
+.nap .zzz { position: absolute; width: 46px; top: -22px; right: -40px; filter: drop-shadow(1px 1px 0 var(--navy)) drop-shadow(-1px -1px 0 var(--navy)); }
 .about { max-width: 720px; text-align: center; font-size: 1.12rem; padding-top: 32px; }
 .grid { display: grid; gap: 22px; }
 
@@ -251,11 +241,11 @@ a { color: var(--navy); }
   position: relative; text-align: center; transform: rotate(-1.5deg);
 }
 .qr-card::before { content: '🧋'; position: absolute; top: -46px; right: -30px; font-size: 3.2rem; transform: rotate(12deg); }
-.qr-card::after { content: '🍦'; position: absolute; bottom: -20px; left: -18px; font-size: 2.8rem; transform: rotate(-12deg); }
+.sticker-love { position: absolute; bottom: -30px; left: -34px; width: 78px; transform: rotate(-12deg); }
 .qr-head { display: flex; justify-content: space-between; font: 800 1.05rem 'Baloo 2', sans-serif; margin-bottom: 10px; }
 .qr-brand { color: #d7262e; }
 .qr-bank { color: var(--navy); }
-.qr-card img { width: 100%; min-width: 220px; background: #fff; border-radius: 16px; padding: 8px; }
+.qr-img { width: 100%; min-width: 220px; background: #fff; border-radius: 16px; padding: 8px; }
 .qr-scan { margin: 10px 0; font-size: .9rem; color: var(--muted); }
 .qr-card dl { margin: 0 0 14px; text-align: left; font-size: .95rem; }
 .qr-card dl div { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 2px dashed #16306e26; }
