@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mixie Empire: Boba &amp; Ice Cream</title>
+  <meta name="description" content="Game quản lý cozy: tự tay múc kem, pha trà sữa và xây dựng đế chế của riêng bạn. Miễn phí, không quảng cáo.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mixie Empire: Boba &amp; Ice Cream">
+  <meta property="og:description" content="Gác lại âu lo, ghé ngay ốc đảo ngọt ngào! Game cozy miễn phí, không quảng cáo.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta name="theme-color" content="#bfe6ff">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+    <span class="boba b1"></span><span class="boba b2"></span><span class="boba b3"></span><span class="boba b4"></span><span class="boba b5"></span>
+  </div>
+
+  <header class="topbar">
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="Mixie Empire" width="430" height="177"></a>
+    <nav class="nav">
+      <a href="#about" data-i18n="nav.about">Giới thiệu</a>
+      <a href="#features" data-i18n="nav.features">Tính năng</a>
+      <a href="#howto" data-i18n="nav.howto">Cách chơi</a>
+      <a href="#donate" data-i18n="nav.donate">Ủng hộ</a>
+    </nav>
+    <button id="lang-toggle" class="lang" type="button" data-i18n="lang.label" data-i18n-attr="aria-label:lang.switch" aria-label="Switch to English">EN</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-logo" src="assets/logo.png" alt="Mixie Empire" width="430" height="177">
+      <h1 class="tagline" data-i18n="hero.tagline">Gác lại âu lo, ghé ngay ốc đảo ngọt ngào!</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Tự tay múc kem, pha trà sữa và xây dựng đế chế kem &amp; trà sữa của riêng bạn trong thế giới 3D low-poly đầy màu sắc.</p>
+
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/vDgKtOoGljU" loading="lazy"
+          data-i18n-attr="title:hero.trailer" title="Trailer"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-main" href="https://monomee.itch.io/mixie-empire-boba-and-ice-cream" target="_blank" rel="noopener">▶ <span data-i18n="hero.play">Chơi ngay trên trình duyệt</span></a>
+        <a class="btn btn-alt" href="https://monomee.itch.io/mixie-empire-boba-and-ice-cream" target="_blank" rel="noopener">⬇ <span data-i18n="hero.android">Tải cho Android</span></a>
+      </div>
+      <p class="badge" data-i18n="hero.badge">Miễn phí · Không quảng cáo ngắt quãng</p>
+    </section>
+
+    <section id="about" class="section about">
+      <h2 data-i18n="about.title">Một góc nhỏ để thả lỏng tâm trí</h2>
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+    </section>
+
+    <section id="features" class="section">
+      <h2 data-i18n="features.title">Có gì trong Mixie Empire?</h2>
+      <div class="grid features">
+        <article class="card"><span class="icon">🍦</span><h3 data-i18n="f1.title"></h3><p data-i18n="f1.text"></p></article>
+        <article class="card"><span class="icon">🏪</span><h3 data-i18n="f2.title"></h3><p data-i18n="f2.text"></p></article>
+        <article class="card"><span class="icon">🎨</span><h3 data-i18n="f3.title"></h3><p data-i18n="f3.text"></p></article>
+        <article class="card"><span class="icon">🎧</span><h3 data-i18n="f4.title"></h3><p data-i18n="f4.text"></p></article>
+        <article class="card"><span class="icon">📱</span><h3 data-i18n="f5.title"></h3><p data-i18n="f5.text"></p></article>
+        <article class="card"><span class="icon">💗</span><h3 data-i18n="f6.title"></h3><p data-i18n="f6.text"></p></article>
+      </div>
+    </section>
+
+    <section id="howto" class="section">
+      <h2 data-i18n="howto.title">Chơi như thế nào?</h2>
+      <ol class="grid steps">
+        <li class="card step"><img src="assets/step-1.jpg" alt="" loading="lazy" width="800" height="600"><h3 data-i18n="s1.title"></h3><p data-i18n="s1.text"></p></li>
+        <li class="card step"><img src="assets/step-2.jpg" alt="" loading="lazy" width="800" height="600"><h3 data-i18n="s2.title"></h3><p data-i18n="s2.text"></p></li>
+        <li class="card step"><img src="assets/step-3.jpg" alt="" loading="lazy" width="800" height="600"><h3 data-i18n="s3.title"></h3><p data-i18n="s3.text"></p></li>
+        <li class="card step"><img src="assets/step-4.jpg" alt="" loading="lazy" width="800" height="600"><h3 data-i18n="s4.title"></h3><p data-i18n="s4.text"></p></li>
+      </ol>
+      <p class="center"><a class="link" href="https://www.youtube.com/watch?v=vDgKtOoGljU" target="_blank" rel="noopener" data-i18n="howto.video">Xem video hướng dẫn trên YouTube</a></p>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2 data-i18n="gallery.title">Khoảnh khắc trong game</h2>
+      <div class="grid gallery">
+        <img src="assets/shot-1.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+        <img src="assets/shot-2.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+        <img src="assets/shot-3.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+        <img src="assets/shot-4.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+        <img src="assets/shot-5.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+        <img src="assets/shot-6.jpg" data-i18n-attr="alt:gallery.alt" alt="" loading="lazy" width="1280" height="720">
+      </div>
+    </section>
+
+    <section id="donate" class="section donate">
+      <div class="donate-text">
+        <h2 data-i18n="donate.title">Mời tác giả một ly trà sữa 🧋</h2>
+        <p data-i18n="donate.text"></p>
+        <!-- Bỏ thuộc tính hidden và điền link Ko-fi/PayPal khi cần nhận ủng hộ quốc tế -->
+        <a class="btn btn-alt" href="#" target="_blank" rel="noopener" hidden data-i18n="donate.intl">Ủng hộ qua Ko-fi</a>
+      </div>
+
+      <figure class="qr-card">
+        <div class="qr-head"><span class="qr-brand">VietQR</span><span class="qr-bank">MB Bank</span></div>
+        <img src="assets/qr.png" data-i18n-attr="alt:donate.qr" alt="Mã QR chuyển khoản MB Bank" width="490" height="490">
+        <figcaption>
+          <p class="qr-scan" data-i18n="donate.scan"></p>
+          <dl>
+            <div><dt data-i18n="donate.bank">Ngân hàng</dt><dd>MB Bank</dd></div>
+            <div><dt data-i18n="donate.owner">Chủ tài khoản</dt><dd>NGUYEN VIET HOANG</dd></div>
+            <div><dt data-i18n="donate.account">Số tài khoản</dt><dd class="acc">0866903661</dd></div>
+          </dl>
+          <button class="btn btn-copy" type="button" data-copy="0866903661">📋 <span data-i18n="donate.copy">Sao chép số TK</span></button>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://monomee.itch.io/mixie-empire-boba-and-ice-cream" target="_blank" rel="noopener">itch.io</a>
+    <p data-i18n="footer.made">Làm bằng 💗 bởi Monomee</p>
+  </footer>
+</body>
+</html>
