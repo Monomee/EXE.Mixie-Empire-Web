@@ -107,11 +107,32 @@ a { color: var(--navy); }
 .wave-back { fill: var(--sea); bottom: 18px; opacity: .8; animation-duration: 22s; animation-direction: reverse; }
 .wave-front { fill: var(--sand); }
 
+/* Beach props */
+.palm { position: absolute; left: -24px; bottom: 34px; width: 250px; height: auto; overflow: visible; }
+.palm .trunk { fill: none; stroke: var(--navy); stroke-width: 22; stroke-linecap: round; }
+.palm .trunk-rings { fill: none; stroke: #c98b4a; stroke-width: 15; stroke-linecap: round; stroke-dasharray: 16 5; }
+.palm .leaves path { fill: #3fcf72; stroke: var(--navy); stroke-width: 3; stroke-linejoin: round; }
+.palm .leaves .dark { fill: #25a95a; }
+.palm .leaves { transform-origin: 112px 112px; animation: sway 6s ease-in-out infinite; }
+.palm .coco { fill: #7a4a22; stroke: var(--navy); stroke-width: 3; }
+.ring {
+  position: absolute; right: 20%; bottom: 30px; width: 84px; aspect-ratio: 1; border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 0 31%, var(--navy) 31% 35%, transparent 35% 95%, var(--navy) 95%),
+    conic-gradient(#ff5d7a 0 60deg, #fff 0 120deg, #ff5d7a 0 180deg, #fff 0 240deg, #ff5d7a 0 300deg, #fff 0);
+  -webkit-mask: radial-gradient(circle, transparent 0 31%, #000 31%);
+          mask: radial-gradient(circle, transparent 0 31%, #000 31%);
+  transform: scaleY(.5);
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes sway { 50% { transform: rotate(3deg); } }
+@keyframes float { 50% { transform: translateY(-7px) scaleY(.5) rotate(6deg); } }
+
 @keyframes spin { to { transform: rotate(1turn); } }
 @keyframes surf { to { transform: translateX(-50%); } }
 @keyframes bob { 50% { transform: translateY(-8px); } }
 @media (prefers-reduced-motion: reduce) {
-  .sun::before, .wave, .c1 { animation: none; }
+  .sun::before, .wave, .c1, .palm .leaves, .ring { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -125,7 +146,9 @@ a { color: var(--navy); }
   .sun { width: 380px; top: -120px; right: -150px; }
 }
 @media (max-width: 480px) {
-  .hero { padding-top: 64px; }
+  .hero { padding-top: 64px; padding-bottom: 170px; }
+  .palm { width: 92px; left: -26px; bottom: 26px; }
+  .ring { width: 60px; right: 10%; bottom: 18px; }
   .hero-inner { gap: 16px; }
   .hero-logo { width: 190px; margin-bottom: 4px; }
   .tagline { font-size: 1.75rem; }
