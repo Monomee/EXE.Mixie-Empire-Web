@@ -4,6 +4,7 @@ const I18N = {
     'nav.features': 'Tính năng',
     'nav.howto': 'Cách chơi',
     'nav.donate': 'Ủng hộ',
+    'nav.contact': 'Liên hệ',
     'nav.play': 'Chơi ngay',
     'lang.switch': 'Switch to English',
     'lang.label': 'EN',
@@ -64,6 +65,8 @@ const I18N = {
     'donate.qr': 'Mã QR chuyển khoản TPBank',
     'donate.intl': 'Ủng hộ qua Ko-fi',
 
+    'contact.title': 'Liên hệ',
+    'contact.text': 'Theo dõi Mixie Empire để xem tin mới, hoặc nhắn tin cho tác giả nhé!',
     'footer.made': 'Làm bằng 💗 bởi Monomee',
   },
   en: {
@@ -71,6 +74,7 @@ const I18N = {
     'nav.features': 'Features',
     'nav.howto': 'How to play',
     'nav.donate': 'Support',
+    'nav.contact': 'Contact',
     'nav.play': 'Play now',
     'lang.switch': 'Chuyển sang tiếng Việt',
     'lang.label': 'VI',
@@ -131,6 +135,8 @@ const I18N = {
     'donate.qr': 'TPBank transfer QR code',
     'donate.intl': 'Support on Ko-fi',
 
+    'contact.title': 'Contact',
+    'contact.text': 'Follow Mixie Empire for news, or send the developer a message!',
     'footer.made': 'Made with 💗 by Monomee',
   },
 };

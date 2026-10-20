@@ -276,6 +276,10 @@ a { color: var(--navy); }
   .qr-card { transform: none; }
 }
 
+.contact { text-align: center; }
+.contact p { font-size: 1.12rem; }
+.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+
 .footer { text-align: center; padding: 28px 16px 40px; background: var(--navy); color: #dfe7ff; font-weight: 600; }
 .footer a { color: var(--sun); font-weight: 800; }
 .footer p { margin: 6px 0 0; }
