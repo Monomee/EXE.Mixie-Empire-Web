@@ -147,6 +147,9 @@ function setLang(next) {
   try { localStorage.setItem('lang', lang); } catch {}
 }
 
+// GoatCounter custom event; no-op if the script is blocked or not loaded yet
+const track = name => window.goatcounter?.count?.({ path: name, title: name, event: true });
+
 document.addEventListener('DOMContentLoaded', () => {
   let saved = null;
   try { saved = localStorage.getItem('lang'); } catch {}
@@ -156,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-copy]').forEach(btn => {
     btn.addEventListener('click', async () => {
+      track('donate-copy');
       try {
         await navigator.clipboard.writeText(btn.dataset.copy);
       } catch {
@@ -166,4 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { label.textContent = I18N[lang]['donate.copy']; }, 2000);
     });
   });
+
+  const qr = document.querySelector('.qr-card');
+  new IntersectionObserver(([e], obs) => {
+    if (e.isIntersecting) { track('donate-qr-view'); obs.disconnect(); }
+  }, { threshold: 0.5 }).observe(qr);
 });
