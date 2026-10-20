@@ -58,9 +58,10 @@ const I18N = {
     'donate.bank': 'Ngân hàng',
     'donate.owner': 'Chủ tài khoản',
     'donate.account': 'Số tài khoản',
+    'donate.memo': 'Nội dung',
     'donate.copy': 'Sao chép số TK',
     'copied': 'Đã sao chép ✓',
-    'donate.qr': 'Mã QR chuyển khoản MB Bank',
+    'donate.qr': 'Mã QR chuyển khoản TPBank',
     'donate.intl': 'Ủng hộ qua Ko-fi',
 
     'footer.made': 'Làm bằng 💗 bởi Monomee',
@@ -124,9 +125,10 @@ const I18N = {
     'donate.bank': 'Bank',
     'donate.owner': 'Account holder',
     'donate.account': 'Account number',
+    'donate.memo': 'Transfer note',
     'donate.copy': 'Copy account no.',
     'copied': 'Copied ✓',
-    'donate.qr': 'MB Bank transfer QR code',
+    'donate.qr': 'TPBank transfer QR code',
     'donate.intl': 'Support on Ko-fi',
 
     'footer.made': 'Made with 💗 by Monomee',
