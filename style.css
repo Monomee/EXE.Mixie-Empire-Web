@@ -215,13 +215,18 @@ a { color: var(--navy); }
 /* Gallery: summer polaroids */
 .gallery { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); padding: 8px; }
 .gallery img {
-  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #fff;
-  padding: 10px 10px 34px; border-radius: 6px;
+  width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: #fff;
+  padding: 12px 12px 38px; border-radius: 8px;
   box-shadow: 0 10px 24px #16306e2e;
   transform: rotate(-2deg);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 .gallery img:nth-child(even) { transform: rotate(2deg); }
 .gallery img:nth-child(3n) { transform: rotate(-1deg); }
+.gallery img:hover {
+  transform: translateY(-6px) rotate(0deg) scale(1.02);
+  box-shadow: 0 18px 32px #16306e3d;
+}
 
 /* Rate on itch.io */
 .rate { padding-top: 16px; }
